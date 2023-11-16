@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 function IndexPage() {
   const API = import.meta.env.VITE_API_URL;
@@ -24,18 +25,23 @@ function IndexPage() {
         return (
           <div className="col " key={index}>
             <div className="card h-100 p-2">
-              <img
-                src={item.image}
-                className="card-img-top"
-                alt={item.name}
-                style={{ objectFit: "cover", height: "250px" }}
-              />
-              <div className="card-body">
-                <h5 className="card-title">{item.name}</h5>
-                <div className="card-footer bg-transparent border-success px-1">
-                  ${item.price}
+              <Link to={`/foods/{index}`}>
+                <img
+                  src={item.image}
+                  className="card-img-top"
+                  alt={item.name}
+                  style={{
+                    objectFit: "cover",
+                    height: "250px",
+                  }}
+                />
+                <div className="card-body" style={{ color: "green" }}>
+                  <h5 className="card-title">{item.name}</h5>
+                  <div className="card-footer bg-transparent border-success px-1">
+                    ${item.price}
+                  </div>
                 </div>
-              </div>
+              </Link>
             </div>
           </div>
         );
