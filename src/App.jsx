@@ -7,6 +7,7 @@ import IndexPage from "./Components/IndexPage";
 import ShowPage from "./Components/ShowPage";
 import EditPage from "./Components/EditPage";
 import NewPage from "./Components/NewPage";
+import ContactUsPage from "./Components/ContactUsPage";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
+        <Route path="/contact" element={<ContactUsPage />} />
         <Route path="/foods" element={<IndexPage />} />
         <Route path="/foods/new" element={<NewPage />} />
         <Route path="/foods/:index" element={<ShowPage />} />
