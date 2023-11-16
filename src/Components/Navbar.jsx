@@ -1,14 +1,23 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
+  const navigate = useNavigate();
+
+  function handleNewItembutton() {
+    navigate(`/foods/new`);
+  }
   return (
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-      <div class="container-fluid" style={{ backgroundColor: "lightgreen" }}>
-        <a class="navbar-brand fw-bold fs-1 py-3" href="/">
+    <nav className="navbar navbar-expand-lg bg-body-tertiary">
+      <div
+        className="container-fluid"
+        style={{ backgroundColor: "lightgreen" }}
+      >
+        <a className="navbar-brand fw-bold fs-1 py-3" href="/">
           <span style={{ color: "red", fontSize: "50px" }}>S</span>PICE AVENUE
         </a>
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-bs-toggle="collapse"
           data-bs-target="#navbarNavAltMarkup"
@@ -16,17 +25,21 @@ function Navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon"></span>
+          <span className="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-          <div class="navbar-nav px-5">
-            <a class="nav-link active px-5 fs-2" aria-current="page" href={"/"}>
+        <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
+          <div className="navbar-nav px-5">
+            <a
+              className="nav-link active px-5 fs-2"
+              aria-current="page"
+              href={"/"}
+            >
               Home
             </a>
-            <a class="nav-link active px-5 fs-2" href={"/about"}>
+            <a className="nav-link active px-5 fs-2" href={"/about"}>
               About
             </a>
-            <a class="nav-link active px-5 fs-2" href={"/contact"}>
+            <a className="nav-link active px-5 fs-2" href={"/contact"}>
               Contact Us
             </a>
           </div>
@@ -34,6 +47,7 @@ function Navbar() {
             <button
               type="button"
               className="btn btn-secondary px-2 fw-bold"
+              onClick={handleNewItembutton}
               style={{
                 color: "black",
                 backgroundColor: "lightgreen",
