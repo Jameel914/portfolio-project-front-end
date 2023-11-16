@@ -21,11 +21,11 @@ function IndexPage() {
   }
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4 m-5">
-      {food.map((item, index) => {
+      {food.map((item) => {
         return (
-          <div className="col " key={index}>
+          <div className="col " key={item.id}>
             <div className="card h-100 p-2">
-              <Link to={`/foods/{index}`}>
+              <Link to={`/foods/${item.id}`} style={{ textDecoration: "none" }}>
                 <img
                   src={item.image}
                   className="card-img-top"
