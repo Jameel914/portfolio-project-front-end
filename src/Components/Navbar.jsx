@@ -46,15 +46,15 @@ function Navbar() {
           <div className="ms-auto">
             <button
               type="button"
-              className="btn btn-secondary px-2 fw-bold"
+              className="btn btn-secondary px-2"
               onClick={handleNewItembutton}
               style={{
                 color: "black",
-                backgroundColor: "lightgreen",
-                border: "1px solid red",
+                backgroundColor: "green",
+                border: "1px solid green",
               }}
             >
-              Add New Item
+              ADD NEW ITEM
             </button>
           </div>
         </div>
