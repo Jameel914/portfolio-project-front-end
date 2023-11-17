@@ -78,7 +78,7 @@ function ShowPage() {
             <div>
               <button
                 type="button"
-                class="btn btn-success text-dark"
+                className="btn btn-success text-dark"
                 onClick={handleBackButton}
               >
                 BACK
@@ -87,7 +87,7 @@ function ShowPage() {
             <div>
               <button
                 type="button"
-                class="btn btn-success text-dark"
+                className="btn btn-success text-dark"
                 onClick={handleEditButton}
               >
                 EDIT
@@ -96,7 +96,7 @@ function ShowPage() {
             <div>
               <button
                 type="button"
-                class="btn btn-success text-dark"
+                className="btn btn-success text-dark"
                 onClick={handleDeleteButton}
               >
                 DELETE
