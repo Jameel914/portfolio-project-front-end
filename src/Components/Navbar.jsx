@@ -30,16 +30,16 @@ function Navbar() {
         <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div className="navbar-nav px-5">
             <a
-              className="nav-link active px-5 fs-2"
+              className="nav-link active px-5 fs-3"
               aria-current="page"
               href={"/"}
             >
               Home
             </a>
-            <a className="nav-link active px-5 fs-2" href={"/about"}>
+            <a className="nav-link active px-5 fs-3" href={"/about"}>
               About
             </a>
-            <a className="nav-link active px-5 fs-2" href={"/contact"}>
+            <a className="nav-link active px-5 fs-3" href={"/contact"}>
               Contact Us
             </a>
           </div>

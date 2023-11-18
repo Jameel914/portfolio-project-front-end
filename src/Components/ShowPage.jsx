@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import { useNavigate, useParams } from "react-router-dom";
+import Modal from "./Modal";
 
 function ShowPage() {
   const API = import.meta.env.VITE_API_URL;
   const [oneFood, setOneFood] = useState("");
+  const [modalShowing, setModalShowing] = useState(false);
   const { index } = useParams();
   const navigate = useNavigate();
 
@@ -41,6 +43,14 @@ function ShowPage() {
 
   return (
     <div className="card mb-3 m-5">
+      {modalShowing ? (
+        <Modal
+          handleDeleteButton={handleDeleteButton}
+          setModalShowing={setModalShowing}
+        />
+      ) : (
+        <></>
+      )}
       <div className="row g-0">
         <div className="col-md-4">
           <img
@@ -97,7 +107,7 @@ function ShowPage() {
               <button
                 type="button"
                 className="btn btn-success text-dark"
-                onClick={handleDeleteButton}
+                onClick={() => setModalShowing(true)}
               >
                 DELETE
               </button>
