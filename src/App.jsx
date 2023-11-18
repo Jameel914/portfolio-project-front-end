@@ -11,20 +11,21 @@ import ContactUsPage from "./Components/ContactUsPage";
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-
-      <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/about" element={<AboutPage />} />
-        <Route path="/contact" element={<ContactUsPage />} />
-        <Route path="/foods" element={<IndexPage />} />
-        <Route path="/foods/new" element={<NewPage />} />
-        <Route path="/foods/:index" element={<ShowPage />} />
-        <Route path="/foods/:index/edit" element={<EditPage />} />
-        <Route path="*" element={<PageNotFound />} />
-      </Routes>
-    </Router>
+    <>
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/contact" element={<ContactUsPage />} />
+          <Route path="/foods" element={<IndexPage />} />
+          <Route path="/foods/new" element={<NewPage />} />
+          <Route path="/foods/:index" element={<ShowPage />} />
+          <Route path="/foods/:index/edit" element={<EditPage />} />
+          <Route path="*" element={<PageNotFound />} />
+        </Routes>
+      </Router>
+    </>
   );
 }
 
