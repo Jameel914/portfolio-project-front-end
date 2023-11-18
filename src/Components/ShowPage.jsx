@@ -17,7 +17,7 @@ function ShowPage() {
   async function fetchOneFood() {
     try {
       let result = await axios.get(`${API}/foods/${index}`);
-      console.log(result.data);
+
       setOneFood(result.data);
     } catch (error) {
       console.log(error);

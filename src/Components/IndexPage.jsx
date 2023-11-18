@@ -13,7 +13,7 @@ function IndexPage() {
   async function fetchIndex() {
     try {
       let result = await axios.get(`${API}/foods`);
-      console.log(result.data);
+
       setFood(result.data);
     } catch (error) {
       console.log(error);

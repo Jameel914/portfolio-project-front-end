@@ -22,7 +22,7 @@ function EditPage() {
   async function fetchEditFood() {
     try {
       let result = await axios.get(`${API}/foods/${index}`);
-      console.log(result.data);
+
       setName(result.data.name);
       setImage(result.data.image);
       setCalories(result.data.calories);
