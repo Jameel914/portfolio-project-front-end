@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 function IndexPage() {
   const API = import.meta.env.VITE_API_URL;
   const [food, setFood] = useState([]);
+  const [visible, setVisible] = useState(3);
 
   useEffect(() => {
     fetchIndex();
@@ -19,9 +20,14 @@ function IndexPage() {
       console.log(error);
     }
   }
+
+  function Loadmore() {
+    setVisible(visible + 3);
+  }
+
   return (
     <div className="row row-cols-1 row-cols-md-3 g-4 m-5">
-      {food.map((item) => {
+      {food.slice(0, visible).map((item) => {
         return (
           <div className="col " key={item.id}>
             <div className="card h-100 p-2">
@@ -43,6 +49,17 @@ function IndexPage() {
                 </div>
               </Link>
             </div>
+            {visible < food.length && (
+              <div className="d-flex justify-content-center mt-5">
+                <button
+                  type="button"
+                  className="btn btn-success text-dark"
+                  onClick={Loadmore}
+                >
+                  LOAD MORE
+                </button>
+              </div>
+            )}
           </div>
         );
       })}

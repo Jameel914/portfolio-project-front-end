@@ -4,11 +4,8 @@ function ContactUsPage() {
   return (
     <>
       <div className="d-flex justify-content-center mt-5">
-        <div
-          className=""
-          style={{ width: "500px", margin: "50px", fontSize: "40px" }}
-        >
-          <ul class="list-group list-group-flush">
+        <div className="fs-5 m-5">
+          <ul class="list-group list-group-flush ">
             <li class="list-group-item">750 Main Street</li>
             <li class="list-group-item">Hartford, CT - 06103</li>
             <li class="list-group-item">
