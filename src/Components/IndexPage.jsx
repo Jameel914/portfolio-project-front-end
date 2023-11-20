@@ -59,7 +59,7 @@ function IndexPage() {
           );
         })}
       {visible < food.length && (
-        <div className="d-flex justify-content-center mt-5">
+        <div className="mt-5">
           <button
             type="button"
             className="btn btn-success text-dark"
