@@ -8,8 +8,6 @@
 
 - [Back-end github repo](https://github.com/Jameel914/portfolio-project-back-end)
 
-- [Recording] (<video src="video1619288816.mp4" controls title="Title"></video>)
-
 ## Installation
 
 1. Clone the repository
